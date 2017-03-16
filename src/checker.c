@@ -96,7 +96,7 @@ int	main(int argc, char **argv)
 			while (*tmp)
 			{
 				temp = ft_atoi(tmp);
-				ft_listaddback(&(list_data->stack_a), ft_lstnew(&temp, sizeof(int*)));
+				ft_lstadd(&(list_data->stack_a), ft_lstnew(&temp, sizeof(int*)));
 				while (*tmp == ' ')
 					tmp++;
 				if ((ret = ft_str_index(tmp, ' ') != -1))
@@ -111,7 +111,7 @@ int	main(int argc, char **argv)
 			while (i < argc && ft_isdigit(argv[i][0]))
 			{
 				temp = ft_atoi(argv[i]);
-				ft_listaddback(&(list_data->stack_a), ft_lstnew(&temp, sizeof(int*)));
+				ft_lstadd(&(list_data->stack_a), ft_lstnew(&temp, sizeof(int*)));
 				i++;
 			}
 		}
@@ -143,6 +143,7 @@ int	main(int argc, char **argv)
 				ft_rrr(&(list_data->stack_a), &(list_data->stack_b));
 			else
 				ft_putstr(BD_RED"Error\n"RESET);
+			print_lists(&(list_data->stack_a), &(list_data->stack_b));
 		}
 		// while (i < argc)
 		// {
@@ -191,8 +192,8 @@ int	main(int argc, char **argv)
 	// int x = 0;
 	// while (x < 11)
 	// {
-	// 	ft_listaddback(&(list_data->stack_a), ft_lstnew(&args[x], sizeof(int*)));
-	// 	ft_listaddback(&(list_data->stack_b), ft_lstnew(&brgs[x], sizeof(int*)));
+	// 	ft_listadd(&(list_data->stack_a), ft_lstnew(&args[x], sizeof(int*)));
+	// 	ft_listadd(&(list_data->stack_b), ft_lstnew(&brgs[x], sizeof(int*)));
 	// 	x++;
 	// }
 	// print_lists(&(list_data->stack_a), &(list_data->stack_b));

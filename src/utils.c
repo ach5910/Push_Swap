@@ -59,7 +59,33 @@ int ft_is_rev_sorted(t_list **stack_a)
 	}
 	return (1);
 }
+// int ft_is_loopsorted(t_data *list_data)
+// {
+// 	t_list *a;
+// 	int *prev_val;
+// 	int *curr_val;
 
+// 	if (!(list_data->stack_a))
+// 		return (-1);
+// 	a = list_data->stack_a;
+// 	prev_val = a->content;
+// 	a = a->next;
+// 	ft_get_limits(list_data);
+// 	while (a)
+// 	{
+// 		curr_val = a->content;
+// 		if (*prev_val >= *curr_val)
+// 		{
+// 			if (*prev_val == *curr_val)
+// 				return (-1);
+// 			else if (*prev_val != list_data->max && *curr_val != list_data->min)
+// 				return (0);
+// 		}
+// 		a = a->next;
+// 		prev_val = curr_val;
+// 	}
+// 	return (1);
+// }
 int ft_is_sorted(t_list **stack_a)
 {
 	t_list *a;

@@ -19,10 +19,14 @@ typedef struct		s_data
 {
 	t_list			*stack_a;
 	t_list			*stack_b;
+	int				*min_list;
 	int				min;
 	int				max;
+	int				mid;
 	int				min_i;
 	int				max_i;
+	int				top_a;
+	int				bottom_a;
 	int				size_a;
 	int				r_cost;
 	int				rr_cost;
